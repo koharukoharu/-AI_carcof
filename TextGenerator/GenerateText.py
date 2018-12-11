@@ -160,3 +160,5 @@ class GenerateText(object):
 if __name__ == '__main__':
     generator = GenerateText()
     print(generator.generate())
+
+
