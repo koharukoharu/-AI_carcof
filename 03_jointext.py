@@ -4,11 +4,15 @@ import os
 path = "./study/new_tweet.txt"
 tuika = ""
 
-#追加textをtwitterから取得し、書き込み用データにする。
-#RTやURLの削除リプレース処理が必要
+def jointext():
+    #追加textをtwitterから取得し、書き込み用データにする。
+    #RTやURLの削除リプレース処理が必要
 
-if os.path.isfile(path):
-    contents = open(path, "a+", encoding="utf8", errors="ignore")
-    contents.write(tuika + "\n")
+    if os.path.isfile(path):
+        contents = open(path, "a+", encoding="utf8", errors="ignore")
+        contents.write(tuika + "\n")
 
-contents.close()
+    contents.close()
+
+if __name__ == '__main__':
+    jointext()

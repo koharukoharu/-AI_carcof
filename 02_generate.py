@@ -1,5 +1,9 @@
 # -*- coding: utf-8 -*-
-
 from GenerateText import GenerateText
-generator = GenerateText()
-print(generator.generate())
+
+def generate_tweet():
+    generator = GenerateText()
+    print(generator.generate())
+
+if __name__ == '__main__':
+    generate_tweet()
