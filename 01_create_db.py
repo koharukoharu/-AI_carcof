@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
+
 from PrepareChain import PrepareChain
 
-contents = open("new_tweet.txt", "r", encoding="utf8", errors='ignore')
+contents = open("./study/new_tweet.txt", "r", encoding="utf8", errors="ignore")
 text = contents.read()
 
 chain = PrepareChain(text)
