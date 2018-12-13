@@ -16,12 +16,12 @@ class GenerateText(object):
     文章生成用クラス
     """
 
-    def __init__(self, n=5):
+    def __init__(self, n=1):
         u"""
         初期化メソッド
         @param n いくつの文章を生成するか
         """
-        self.n = n
+        self.n = random.randrange(4) + 1
 
     def generate(self):
         u"""
@@ -41,9 +41,12 @@ class GenerateText(object):
 
         # 指定の数だけ作成する
         # for i in xrange(self.n):
-        for i in range(self.n):
-            text = self._generate_sentence(con)
-            generated_text += text
+        while len(generated_text) == 0:
+            for i in range(self.n):
+                text = self._generate_sentence(con)
+                generated_text += text
+            if len(generated_text) > 140:
+                generated_text = u""
 
         # DBクローズ
         con.close()
