@@ -22,7 +22,7 @@ def create_addtext():
 
     #since_IDをファイルで保持させて読み込むと前回取得ツイートの続きから取得できそう
 
-    since_id_read = open("since.txt", "r", encoding="utf8", errors="ignore")
+    since_id_read = open("./study/since.txt", "r", encoding="utf8", errors="ignore")
     since_id_load = since_id_read.read()
     since_id_read.close()
 
