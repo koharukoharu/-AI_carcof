@@ -2,15 +2,13 @@ import re
 
 replypattern = '@[\w]+'
 urlpattern = 'https?://[\w/:%#\$&\?\(\)~\.=\+\-]+'
-rtpattern = '^RT.*$'
+rtpattern = '^RT'
 datepattern ='\w+ \w+ \d+ \d+:\d+:\d+ .\d+ \d+$'
-
 
 contents = open("koko.txt", "r", encoding="utf8", errors='ignore')
 
 for text in contents:
     i = re.sub(replypattern, '', text)
-
     i = re.sub(urlpattern, '', i)
     i = re.sub(rtpattern, '', i)
     #i = re.sub(datepattern, '', i)
